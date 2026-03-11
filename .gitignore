@@ -1,0 +1,32 @@
+# Environment
+.env
+.env.local
+.env.production
+
+# Java / Maven
+backend/target/
+*.class
+*.jar
+*.war
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker/volumes/
+
+# Logs
+*.log
+logs/
+EOF*.zip
