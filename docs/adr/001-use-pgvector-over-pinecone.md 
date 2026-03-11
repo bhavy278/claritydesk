@@ -1,0 +1,22 @@
+# ADR 001 — Use pgvector over Pinecone
+
+## Status
+Accepted
+
+## Context
+ClarityDesk needs vector storage for RAG-based chat.
+Options considered: Pinecone, Weaviate, pgvector.
+
+## Decision
+Use pgvector as a PostgreSQL extension.
+
+## Reasoning
+- Keeps the stack simple — one database for relational + vector data
+- No additional managed service or API key needed
+- PostgreSQL is already our primary database
+- pgvector supports cosine similarity search sufficient for our scale
+
+## Consequences
+- Slightly less scalable than dedicated vector DBs at massive scale
+- Acceptable tradeoff for a solo productivity tool
+EOF
